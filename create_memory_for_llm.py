@@ -1,6 +1,6 @@
 import os
-from langchain.document_loaders import PyPDFLoader
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from dotenv import load_dotenv
@@ -58,4 +58,5 @@ embedding_model = get_embedding_model()
 DB_FAISS_PATH = "vectorstore/db_faiss"
 db = FAISS.from_documents(text_chunks, embedding_model)
 db.save_local(DB_FAISS_PATH)
+
 print(f"Vector store saved to {DB_FAISS_PATH}")
