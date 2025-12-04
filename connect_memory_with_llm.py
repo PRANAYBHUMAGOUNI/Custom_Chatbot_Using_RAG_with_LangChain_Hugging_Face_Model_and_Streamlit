@@ -1,5 +1,5 @@
 import os
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import pipeline
@@ -108,4 +108,5 @@ if __name__ == "__main__":
             page_number = doc.metadata.get('page', 'Unknown')
             print(f"- {source}, Page {page_number}")
     else:
+
         print("No relevant documents found.")
