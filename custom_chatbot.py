@@ -2,7 +2,7 @@
 import os
 import streamlit as st
 from langchain_core.prompts import PromptTemplate
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import pipeline
 from dotenv import load_dotenv
@@ -223,3 +223,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
