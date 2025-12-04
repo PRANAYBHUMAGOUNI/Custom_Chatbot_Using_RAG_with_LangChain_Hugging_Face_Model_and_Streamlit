@@ -1,7 +1,7 @@
 
 import os
 import streamlit as st
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from transformers import pipeline
@@ -221,4 +221,5 @@ def main():
 
 # Run the app
 if __name__ == "__main__":
+
     main()
