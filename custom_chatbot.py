@@ -65,8 +65,8 @@ def load_llm():
     torch.manual_seed(42)
     llm = pipeline(
         "text2text-generation",
-        model="google/flan-t5-large",
-        tokenizer="google/flan-t5-large",
+        model="google/flan-t5-base",
+        tokenizer="google/flan-t5-base",
         device=-1,  # Set to -1 for CPU or 0 for GPU
     )
     return llm
@@ -223,4 +223,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
